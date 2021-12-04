@@ -234,3 +234,10 @@
     --ion-card-background: #1e1e1e;
   }
 }
+
+/** 追加 **/
+.modal-wrapper {
+  --width: 80vw;
+  --height: 60vh;
+  --border-radius: 10px;
+}
