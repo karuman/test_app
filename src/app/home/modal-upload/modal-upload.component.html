@@ -1,7 +1,11 @@
-<p>
-  modal-upload works!
-</p>
-<label for="photo">画像を選択</label>
-<input type="file" name="photo" id="photo-upload">
 
-<ion-button>送信</ion-button>
+<label class="photo" for="photo-upload">
+  <div [ngClass]="{'inactive': isSelected}">
+    <ion-icon name="image"></ion-icon><br>
+    画像を選択
+  </div>
+  <ion-img [ngClass]="{'inactive': !isSelected}" [src]="imageSrc"></ion-img>
+</label>
+<input type="file" name="photo" id="photo-upload" accept="image/*" (change)="previewPhoto($event)">
+
+<ion-button class="send">送信</ion-button>
